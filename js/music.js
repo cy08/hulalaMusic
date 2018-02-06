@@ -1,7 +1,8 @@
 // BY - yun
 
+
 // listenEvent("loadstart"); //客户端开始请求数据  
-// listenEvent("progress"); //客户端正在请求数据  
+// listenEvent("progress"); //客户端正在请求数据   
 // listenEvent("suspend"); //延迟下载  
 // listenEvent("abort"); //客户端主动终止下载（不是因为错误引起），  
 // listenEvent("error"); //请求数据时遇到错误  
@@ -375,12 +376,13 @@ var app = new Vue({
                         Media.src = response.data.body.url;
                         _this.list[index].url = response.data.body.url;
                         if (_this.isSearch) {
-                            // _this.isPlayTime = setInterval(function() {
-                            //     if (!_this.playInfo.isplay) {
-                            //         clearInterval(_this.isPlayTime);
-                            //         Media.play();
-                            //     }
-                            // }, 500)
+                            setTimeout(function() {
+                                var img = new Image();
+                                img.src = _this.list[index].imgUrl;
+                                img.onload = function() {
+                                    _this.playInfo.imgBase = img.src;
+                                };
+                            }, 1000)
                         }
                     }
                 })
@@ -388,17 +390,6 @@ var app = new Vue({
                     console.log(error);
                     _this.next();
                 });
-
-            setTimeout(function() {
-                var img = new Image();
-                img.src = _this.list[index].imgUrl;
-                img.onload = function() {
-                    _this.playInfo.imgBase = img.src;
-                };
-            }, 1000)
-
-
-
             //IOS兼容问题 
             if (!_this.isSearch && this.isNext && (isPhone != 'Android' && isPhone != false)) {
                 _this.isPlayTime = setInterval(function() {
