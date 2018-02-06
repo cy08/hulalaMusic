@@ -1,5 +1,6 @@
 // BY - yun
 
+
 // listenEvent("loadstart"); //客户端开始请求数据  
 // listenEvent("progress"); //客户端正在请求数据   
 // listenEvent("suspend"); //延迟下载  
