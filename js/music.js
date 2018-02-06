@@ -1,7 +1,7 @@
 // BY - yun
 
 // listenEvent("loadstart"); //客户端开始请求数据  
-// listenEvent("progress"); //客户端正在请求数据  
+// listenEvent("progress"); //客户端正在请求数据   
 // listenEvent("suspend"); //延迟下载  
 // listenEvent("abort"); //客户端主动终止下载（不是因为错误引起），  
 // listenEvent("error"); //请求数据时遇到错误  
