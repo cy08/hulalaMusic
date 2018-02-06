@@ -1,4 +1,27 @@
 // BY - yun
+
+// listenEvent("loadstart"); //客户端开始请求数据  
+// listenEvent("progress"); //客户端正在请求数据  
+// listenEvent("suspend"); //延迟下载  
+// listenEvent("abort"); //客户端主动终止下载（不是因为错误引起），  
+// listenEvent("error"); //请求数据时遇到错误  
+// listenEvent("stalled"); //网速失速  
+// listenEvent("play"); //play()和autoplay开始播放时触发  
+// listenEvent("pause"); //pause()触发  
+// listenEvent("loadedmetadata"); //成功获取资源长度  
+// listenEvent("loadeddata"); //  
+// listenEvent("waiting"); //等待数据，并非错误  
+// listenEvent("playing"); //开始回放  
+// listenEvent("canplay"); //可以播放，但中途可能因为加载而暂停  
+// listenEvent("canplaythrough"); //可以播放，歌曲全部加载完毕  
+// listenEvent("seeking"); //寻找中  
+// listenEvent("seeked"); //寻找完毕  
+// listenEvent("timeupdate"); //播放时间改变  
+// listenEvent("ended"); //播放结束  
+// listenEvent("ratechange"); //播放速率改变  
+// listenEvent("durationchange"); //资源长度改变  
+// listenEvent("volumechange"); //音量改变
+
 var Media = new Audio();
 
 var userAgentInfo = navigator.userAgent;
